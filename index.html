@@ -1,113 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional English M019 — Unit 1</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#eaf5ff,#f4fff4);
+  color:#17202a;
+  -webkit-user-select:none;
+  user-select:none;
+}
+.wrapper{max-width:1050px;margin:auto;padding:16px}
+.hero{
+  background:linear-gradient(135deg,#0d47a1,#2e7d32);
+  color:white;
+  padding:30px 20px;
+  border-radius:24px;
+  box-shadow:0 10px 25px rgba(0,0,0,.14);
+  text-align:center;
+  margin-bottom:18px;
+  position:relative;
+  overflow:hidden;
+}
+.hero:after{
+  content:"© @elnazm_ln";
+  position:absolute;
+  right:16px;
+  bottom:10px;
+  opacity:.18;
+  font-size:26px;
+  font-weight:bold;
+  transform:rotate(-8deg);
+}
+.hero h1{margin:0 0 10px;font-size:32px;line-height:1.2}
+.hero p{margin:8px 0;line-height:1.5}
+.badge{
+  display:inline-block;
+  background:#fff;
+  color:#0d47a1;
+  font-weight:bold;
+  padding:9px 14px;
+  border-radius:999px;
+  margin-top:12px
+}
+.nav{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+.nav a{
+  text-decoration:none;
+  text-align:center;
+  background:white;
+  color:#0d47a1;
+  font-weight:bold;
+  padding:14px;
+  border-radius:16px;
+  border:1px solid #d7e8ff;
+  box-shadow:0 6px 16px rgba(0,0,0,.08)
+}
+.card{
+  background:white;
+  border-radius:22px;
+  padding:22px;
+  margin:18px 0;
+  box-shadow:0 8px 22px rgba(0,0,0,.08);
+  position:relative;
+  overflow:hidden;
+}
+.card:before{
+  content:"© @elnazm_ln • M019";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) rotate(-24deg);
+  font-size:34px;
+  font-weight:bold;
+  color:rgba(13,71,161,.04);
+  pointer-events:none;
+  white-space:nowrap;
+}
+.unit-head{
+  border-left:6px solid #2e7d32;
+  background:#eef8ee;
+  padding:15px;
+  border-radius:16px;
+  margin-bottom:16px;
+  position:relative;
+  z-index:1;
+}
+.unit-head h2{margin:0 0 6px;color:#0d47a1}
+.question{
+  background:#f8fafc;
+  border-left:5px solid #0d47a1;
+  padding:17px;
+  border-radius:16px;
+  margin:14px 0;
+  position:relative;
+  z-index:1;
+}
+.question-title{font-weight:bold;line-height:1.45;margin-bottom:10px}
+.qtype{
+  display:inline-block;
+  font-size:12px;
+  background:#e3f2fd;
+  color:#0d47a1;
+  padding:4px 8px;
+  border-radius:999px;
+  margin-bottom:8px;
+  font-weight:bold
+}
+label{
+  display:block;
+  background:white;
+  border:1px solid #dde5ef;
+  border-radius:12px;
+  padding:11px;
+  margin:8px 0;
+  cursor:pointer;
+  line-height:1.4
+}
+label:hover{background:#f1f8e9}
+input{margin-right:8px;transform:scale(1.12)}
+button{
+  width:100%;
+  padding:15px;
+  border:0;
+  border-radius:14px;
+  background:#0d47a1;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:14px;
+  position:relative;
+  z-index:2;
+}
+button:hover{background:#08306f}
+.result{margin-top:16px;position:relative;z-index:2}
+.summary{
+  background:#e8f5e9;
+  border:2px solid #2e7d32;
+  border-radius:18px;
+  padding:18px;
+  text-align:center;
+  margin-bottom:18px
+}
+.answer-card{
+  background:#fafafa;
+  border-radius:14px;
+  padding:13px;
+  margin:10px 0;
+  border-left:4px solid #9e9e9e
+}
+.answer-card.correct{border-left-color:#2e7d32}
+.answer-card.wrong{border-left-color:#c62828}
+.correct-text{color:#2e7d32;font-weight:bold}
+.wrong-text{color:#c62828;font-weight:bold}
+.explain{
+  background:white;
+  border:1px solid #e0e0e0;
+  border-radius:12px;
+  padding:12px;
+  line-height:1.55;
+  margin-top:8px
+}
+.small{font-size:13px;color:#555}
+.copyright-box{
+  background:#fff8e1;
+  border:1px solid #ffe082;
+  color:#5d4037;
+  border-radius:16px;
+  padding:14px;
+  line-height:1.5;
+  margin-bottom:18px;
+}
+.footer{
+  text-align:center;
+  color:#607d8b;
+  font-size:14px;
+  padding:24px;
+  line-height:1.6
+}
+@media(max-width:700px){
+  .wrapper{padding:12px}
+  .hero h1{font-size:24px}
+  .nav{grid-template-columns:1fr}
+  .card{padding:16px}
+  .question{padding:14px}
+  .card:before{font-size:22px}
+}
+</style>
+</head>
+
+<body oncontextmenu="return false">
+<div class="wrapper">
+
+<div class="hero">
+  <h1>Professional English M019</h1>
+  <p><b>UNIT 1 — The Status Quo of Children on the Global Scene</b></p>
+  <p>Exam-style practice by subunits: Unit 1.1, Unit 1.2, Unit 1.3</p>
+  <span class="badge">Separate result for each subunit</span>
+</div>
+
+<div class="card">
+  <h2>Инструкция</h2>
+  <p>Әр блокты бөлек тапсыруға болады. Егер тек <b>Unit 1.1</b> тапсырсаңыз, сол блоктың астындағы <b>Показать результат Unit 1.1</b> батырмасын басыңыз.</p>
+  <p class="small">Single answer — бір дұрыс жауап. Multiple answers — бірнеше дұрыс жауап, checkbox арқылы белгілеңіз.</p>
+</div>
+
+<div class="copyright-box">
+  <b>© @elnazm_ln, 2026. All rights reserved.</b><br>
+  Бұл материал авторлық құқықпен қорғалған. Көшіруге, қайта сатуға, басқа сайтқа жариялауға және автордың рұқсатынсыз таратуға болмайды.
+</div>
+
+<div class="nav">
+  <a href="#unit11">Unit 1.1</a>
+  <a href="#unit12">Unit 1.2</a>
+  <a href="#unit13">Unit 1.3</a>
+</div>
+
+<section class="card" id="unit11">
+  <div class="unit-head">
+    <h2>Unit 1.1 — A World Fit for Children</h2>
+    <p>Vocabulary, child prodigies, gender-inclusive language, unique personality.</p>
+  </div>
+  <div id="quiz-unit11"></div>
+  <button onclick="checkUnit('unit11')">Показать результат Unit 1.1</button>
+  <div id="result-unit11" class="result"></div>
+</section>
+
+<section class="card" id="unit12">
+  <div class="unit-head">
+    <h2>Unit 1.2 — A World Unfit for Children</h2>
+    <p>Child protection vocabulary, violence, media and aggression, child labour, homework pressure.</p>
+  </div>
+  <div id="quiz-unit12"></div>
+  <button onclick="checkUnit('unit12')">Показать результат Unit 1.2</button>
+  <div id="result-unit12" class="result"></div>
+</section>
+
+<section class="card" id="unit13">
+  <div class="unit-head">
+    <h2>Unit 1.3 — A Healthy Relationship of Children in Society</h2>
+    <p>Quotes, future skills, fact vs opinion, juvenile justice.</p>
+  </div>
+  <div id="quiz-unit13"></div>
+  <button onclick="checkUnit('unit13')">Показать результат Unit 1.3</button>
+  <div id="result-unit13" class="result"></div>
+</section>
+
+<div class="footer">
+  © @elnazm_ln, 2026. All rights reserved.<br>
+  Professional English M019 — Unit 1 Practice
+</div>
+
+</div>
+
 <script>
 const DATA = {
 unit11:{
 title:"Unit 1.1 — A World Fit for Children",
 questions:[
-/* все вопросы unit11 */
+{type:"single",q:"1. The word “gifted” means:",options:["emotionally unstable","extremely talented","socially isolated","physically strong","academically weak"],answers:[1],ru:"“Gifted” означает “одарённый/талантливый”.",kz:"“Gifted” — “дарындылық/өте талантты” деген мағына береді.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"2. The phrase “in the making” means:",options:["already forgotten","completely unsuccessful","developing for the future","unable to improve","without any talent"],answers:[2],ru:"“In the making” означает “будущий, формирующийся”.",kz:"“In the making” — “болашақта қалыптасып келе жатқан”.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"3. A “prodigy” is:",options:["a child who dislikes studying","a person who copies others","a genius or a person with exceptional ability","a person who avoids competitions","a child with ordinary skills"],answers:[2],ru:"“Prodigy” — это вундеркинд, человек с исключительной способностью.",kz:"“Prodigy” — ерекше қабілеті бар бала, вундеркинд.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"4. The phrase “at a loss to explain” means:",options:["to understand clearly","to be unable to explain","to explain in detail","to ignore a problem","to teach carefully"],answers:[1],ru:"“At a loss to explain” значит “не знать, как объяснить”.",kz:"“At a loss to explain” — “түсіндіре алмау”.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"5. The word “peers” means:",options:["teachers","parents","people of the same age or status","journalists","strangers"],answers:[2],ru:"“Peers” означает “сверстники”, люди одного возраста или статуса.",kz:"“Peers” — “құрдастар”.",source:"POFLIC, Unit 1.1"},
+{type:"multiple",q:"6. Choose the words that describe giftedness or exceptional success.",options:["gifted","prodigy","high flyer","peers","ramshackle","pester","hustler","adulation"],answers:[0,1,2],ru:"Gifted, prodigy и high flyer связаны с талантом, гениальностью или успешностью.",kz:"Gifted, prodigy, high flyer дарындылық пен табыстылықпен байланысты.",source:"POFLIC, Unit 1.1"},
+{type:"multiple",q:"7. Child prodigies may face which problems?",options:["being taunted by peers","being hounded by the press","being prodded by demanding parents","being haunted by expectations","receiving no public attention at all","never facing pressure","being automatically protected from society","having no difficulties"],answers:[0,1,2,3],ru:"Prodigies may be taunted, hounded, prodded and haunted by expectations.",kz:"Prodigies мазақталуы, press тарапынан мазалануы және expectations қысымына түсуі мүмкін.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"8. The main question about child prodigies is whether they are:",options:["rich or poor","born or made","quiet or loud","healthy or ill","local or global"],answers:[1],ru:"Главный вопрос: prodigies are born or made.",kz:"Негізгі сұрақ: prodigies are born or made.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"9. Raw intelligence measured through IQ tests is described as:",options:["not inheritable","very inheritable","impossible to measure","always enough for prodigy behaviour","unrelated to children"],answers:[1],ru:"Raw intelligence measured through IQ tests is very inheritable.",kz:"IQ арқылы өлшенетін raw intelligence very inheritable деп берілген.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"10. According to Wu Wu-tien, prodigies are:",options:["completely born","completely made","half born, half made","only created by schools","unrelated to upbringing"],answers:[2],ru:"Wu Wu-tien: “Prodigies are half born, half made.”",kz:"Wu Wu-tien: “Prodigies are half born, half made.”",source:"POFLIC, Unit 1.1"},
+{type:"multiple",q:"11. A stimulating environment for a gifted child may include:",options:["a home full of books","reading to the child at an early age","museums and concerts","a high degree of independence","no communication with adults","banning all questions","only punishment","no books at home"],answers:[0,1,2,3],ru:"Stimulating environment includes books, early reading, museums, concerts and independence.",kz:"Stimulating environment: books, early reading, museums, concerts және independence.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"12. The pseudo-generic “he/his” is problematic because it:",options:["excludes the female","makes grammar impossible","always means plural","has no meaning","is required in academic writing"],answers:[0],ru:"Использование he/his для обоих полов исключает female.",kz:"he/his сөздерін бәріне ортақ қолдану female-ды шеттетеді.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"13. A gender-inclusive alternative is:",options:["The average student is worried about his grades.","Each student will be better if he has a voice.","Students are worried about their grades.","When a teacher asks a question, he seeks response.","Everyone must bring his book."],answers:[2],ru:"Plural form “Students … their” avoids pseudo-generic he/his.",kz:"Plural form “Students … their” pseudo-generic he/his қолданбайды.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"14. A gender-unmarked occupational term is:",options:["air hostess","fireman","headmistress","flight attendant","sportsman"],answers:[3],ru:"“Flight attendant” is gender-unmarked.",kz:"“Flight attendant” — gender-unmarked.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"15. “Unique personality” is mainly connected with:",options:["only physical appearance","originality of character, worldview and appearance","only academic success","social media popularity","similarity between people"],answers:[1],ru:"Unique personality is originality of character, worldview and appearance.",kz:"Unique personality — character, worldview және appearance originality.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"16. “Talk down to someone” means:",options:["to speak as if someone is less clever or less important","to speak very quietly","to praise someone strongly","to ask for help","to explain something politely"],answers:[0],ru:"“Talk down to someone” означает говорить свысока.",kz:"“Talk down to someone” — біреумен менсінбей сөйлеу.",source:"POFLIC, Unit 1.1"},
+{type:"multiple",q:"17. Choose gender-marked terms.",options:["air hostess","fireman","headmistress","flight attendant","sportsman","cabin attendant","person","assistant"],answers:[0,1,2,4],ru:"Air hostess, fireman, headmistress, sportsman show gender.",kz:"Air hostess, fireman, headmistress, sportsman gender көрсетеді.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"18. “Adulation” means:",options:["excessive admiration or praise","physical punishment","lack of interest","school failure","family conflict"],answers:[0],ru:"“Adulation” means excessive admiration or praise.",kz:"“Adulation” — шектен тыс мақтау, таңдану.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"19. “Demanding parents” are parents who:",options:["require much effort and high achievement from children","never expect anything","avoid communication","give only gifts","do not care about education"],answers:[0],ru:"Demanding parents put pressure on children and expect much from them.",kz:"Demanding parents балаларға жоғары талап қояды.",source:"POFLIC, Unit 1.1"},
+{type:"single",q:"20. “Over-parenting” is connected with:",options:["excessive parental control","complete absence of parents","state allowance","juvenile crime","gender-neutral language"],answers:[0],ru:"Over-parenting means excessive parental control.",kz:"Over-parenting — шамадан тыс ата-аналық бақылау.",source:"POFLIC, Unit 1.1"}
 ]
 },
 
 unit12:{
 title:"Unit 1.2 — A World Unfit for Children",
 questions:[
-/* все вопросы unit12 */
+{type:"single",q:"1. The word “bewildered” means:",options:["very confident","confused and unable to understand clearly","physically strong","financially independent","emotionally calm"],answers:[1],ru:"“Bewildered” означает “растерянный, сбитый с толку”.",kz:"“Bewildered” — “абдырап қалған, түсінбей тұрған”.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"2. The word “distraught” is closest in meaning to:",options:["very upset and worried","highly educated","technologically skilled","financially stable","socially active"],answers:[0],ru:"“Distraught” означает “сильно расстроенный, подавленный”.",kz:"“Distraught” — “қатты күйзелген, қатты уайымдаған”.",source:"POFLIC, Unit 1.2"},
+{type:"multiple",q:"3. Choose the words that describe anxiety or nervous tension.",options:["anxious","on edge","on tenterhooks","affordable","tech-savvy","unnerved","board games","foreign holidays"],answers:[0,1,2,5],ru:"Anxious, on edge, on tenterhooks, unnerved describe anxiety or nervous tension.",kz:"Anxious, on edge, on tenterhooks, unnerved алаңдау мен қобалжуды білдіреді.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"4. DINK stands for:",options:["single income, no kids","double income, no kids","domestic income, new kids","dual industry, no knowledge","direct income, new knowledge"],answers:[1],ru:"DINK = double income, no kids.",kz:"DINK = double income, no kids.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"5. SINK stands for:",options:["single income, no kids","double income, no kids","state income for kids","social income, new knowledge","school income, no kids"],answers:[0],ru:"SINK = single income, no kids.",kz:"SINK = single income, no kids.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"6. A child whose parents work and who returns from school to an empty house is called:",options:["child labour","latchkey child","progeny","dinky","hothouse child"],answers:[1],ru:"Latchkey child — ребёнок, который после школы возвращается в пустой дом.",kz:"Latchkey child — мектептен кейін бос үйге келетін бала.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"7. The illegal removal of a child from parents or guardians is:",options:["child abduction","child benefit","child allowance","empty nest","progeny"],answers:[0],ru:"Child abduction — незаконное похищение ребёнка.",kz:"Child abduction — баланы заңсыз алып кету.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"8. The employment of children, especially when illegal or exploitative, is:",options:["child benefit","child labour","revolving door syndrome","empty nest","DINK"],answers:[1],ru:"Child labour — детский труд, особенно незаконный или эксплуатационный.",kz:"Child labour — балалар еңбегі, әсіресе заңсыз немесе қанаушылық еңбек.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"9. Physical maltreatment or sexual molestation of a child is called:",options:["child abuse","child allowance","child benefit","progeny","hothouse"],answers:[0],ru:"Child abuse means physical maltreatment or sexual molestation of a child.",kz:"Child abuse — балаға физикалық немесе сексуалдық зорлық көрсету.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"10. Violence inflicted upon a young child, especially by a parent, is:",options:["baby battering","child benefit","DINK","SINK","distance learning"],answers:[0],ru:"Baby battering — violence inflicted upon a young child.",kz:"Baby battering — кішкентай балаға күш көрсету.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"11. Illegally procuring and relocating children for forced labour or sexual exploitation is:",options:["child trafficking","child allowance","child benefit","revolving door syndrome","the empty nest"],answers:[0],ru:"Child trafficking is illegal movement of children for exploitation.",kz:"Child trafficking — балаларды қанау үшін заңсыз тасымалдау.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"12. The act of stealing and selling a child to adopting parents under false pretenses is:",options:["child laundering","child benefit","child labour","empty nest","latchkey child"],answers:[0],ru:"Child laundering — stealing and selling a child to adopting parents under false pretenses.",kz:"Child laundering — баланы заңсыз алып, жалған жолмен асырап алуға беру.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"13. The situation in which parents feel unhappy because their adult children have left home is:",options:["child abduction","the empty nest","child trafficking","DINK","baby battering"],answers:[1],ru:"The empty nest describes parents’ sadness after children leave home.",kz:"The empty nest — балалары үйден кеткеннен кейін ата-ананың жалғыз сезінуі.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"14. Adult children returning to live with their parents, often for financial reasons, is called:",options:["revolving door syndrome","child labour","child abuse","hothouse","child allowance"],answers:[0],ru:"Revolving door syndrome — adult children return to live with parents.",kz:"Revolving door syndrome — ересек балалардың ата-анасына қайта оралуы.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"15. “To hothouse” children means:",options:["to put children under pressure to learn as much as possible","to give children state support","to leave children alone at home","to remove children illegally","to protect children from education"],answers:[0],ru:"To hothouse — чрезмерно нагружать ребёнка учёбой.",kz:"To hothouse — баланы шамадан тыс оқуға мәжбүрлеу.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"16. “Progeny” means:",options:["a person’s child or children","a financial payment","emotional violence","a school subject","media activity"],answers:[0],ru:"Progeny means children or descendants.",kz:"Progeny — балалар, ұрпақ.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"17. “Child benefit” or “child allowance” is:",options:["regular payment by the state to parents of a child","illegal child employment","child abduction","child abuse","returning to an empty house"],answers:[0],ru:"Child benefit/child allowance — регулярная выплата государства родителям ребёнка.",kz:"Child benefit/child allowance — мемлекет тарапынан берілетін тұрақты төлем.",source:"POFLIC, Unit 1.2"},
+{type:"multiple",q:"18. Choose the terms directly related to violence, exploitation or violation of children’s rights.",options:["child abuse","child trafficking","child labour","baby battering","child allowance","DINK","child abduction","progeny"],answers:[0,1,2,3,6],ru:"These terms are related to violence, exploitation or violation of children’s rights.",kz:"Бұл терминдер балаларға қатысты зорлық, қанау немесе құқық бұзумен байланысты.",source:"POFLIC, Unit 1.2"},
+{type:"multiple",q:"19. Choose the terms related mainly to family or household situations.",options:["DINK","SINK","the empty nest","revolving door syndrome","latchkey child","child trafficking","child laundering","baby battering"],answers:[0,1,2,3,4],ru:"DINK, SINK, empty nest, revolving door syndrome and latchkey child describe family or household situations.",kz:"DINK, SINK, empty nest, revolving door syndrome, latchkey child отбасы/тұрмыстық жағдайларды білдіреді.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"20. Childhood violence is linked with:",options:["violence against women","foreign holidays","affordable housing","board games","TV listings"],answers:[0],ru:"Childhood violence is linked with violence against women.",kz:"Childhood violence әйелдерге қатысты зорлықпен байланысты.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"21. Speaking out about violence against children is described as:",options:["the first step to ending this type of violence","a reason for increasing violence","an unnecessary action","a media entertainment form","a school discipline method"],answers:[0],ru:"Speaking out is the first step to ending violence against children.",kz:"Балаларға қатысты зорлық туралы ашық айту — оны тоқтатудың алғашқы қадамы.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"22. The study by Dr. Thomas Robinson and others focused on the connection between:",options:["reduced TV/video/video game use and reduced aggression","foreign holidays and academic success","board games and family income","distance learning and child allowance","child benefit and school grades"],answers:[0],ru:"The study focused on reducing TV, videos and video games to reduce aggression.",kz:"Зерттеу TV, videos және video games қолдануын азайту арқылы агрессияны төмендетуге бағытталған.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"23. The school media-reduction program lasted:",options:["18 lessons and 6 months","10 years","7 days","40 years","22 years"],answers:[0],ru:"Students took part in an 18-lesson, 6-month program.",kz:"Оқушылар 18 сабақтан тұратын 6 айлық бағдарламаға қатысқан.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"24. After the six-month program, students who reduced TV time showed:",options:["six fewer acts of verbal aggression per hour","six more acts of verbal aggression per hour","no changes in behavior","more media dependence","higher violent behavior"],answers:[0],ru:"TV reduction led to six fewer acts of verbal aggression per hour.",kz:"TV азайту verbal aggression-ды сағатына алты әрекетке азайтқан.",source:"POFLIC, Unit 1.2"},
+{type:"multiple",q:"25. The Stanford program aimed to reduce children’s use of:",options:["television","videos","video games","books","museums","concerts","homework","family discussion"],answers:[0,1,2],ru:"The program was designed to reduce TV, videos and video games.",kz:"Бағдарлама TV, videos және video games қолдануын азайтуға арналған.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"26. TV-Turnoff is:",options:["an organization encouraging less TV viewing","a television channel","a school discipline program","a state payment system","a video game company"],answers:[0],ru:"TV-Turnoff is an organization that encourages less TV viewing.",kz:"TV-Turnoff — теледидар көруді азайтуды қолдайтын ұйым.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"27. During the TV-Turnoff challenge, students avoided television, videos and video games for:",options:["ten days","six months","twenty-two years","seven hours","forty years"],answers:[0],ru:"Students were challenged to avoid TV, videos or video games for ten days.",kz:"Оқушыларға 10 күн бойы TV, videos және video games қолданбау ұсынылған.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"28. After the TV-Turnoff period, the recommended media allowance was:",options:["seven hours per week","seven hours per day","ten hours per day","no limit","forty hours per week"],answers:[0],ru:"Students were encouraged to stay within seven hours per week.",kz:"Оқушыларға аптасына жеті сағаттық media allowance ұсынылған.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"29. Dr. Leonard D. Eron’s study found that exposure to television violence in childhood is:",options:["the strongest predictor of aggressive behavior later in life","unrelated to adult behavior","useful for developing patience","weaker than school discipline","connected only with academic success"],answers:[0],ru:"Childhood exposure to TV violence is a strong predictor of later aggressive behavior.",kz:"Балалық шақтағы TV violence кейінгі агрессияның күшті көрсеткіші.",source:"POFLIC, Unit 1.2"},
+{type:"multiple",q:"30. Excessive television watching may:",options:["reduce time for interaction with real people","inhibit social skills and patience","make violence seem funny or inconsequential","promote aggression as a medium","always improve communication","guarantee better grades","remove all violent behavior","replace every social problem"],answers:[0,1,2,3],ru:"Too much TV may reduce real interaction, inhibit social skills and normalize aggression.",kz:"Тым көп TV real interaction азайтып, social skills тежеп, aggression-ды қалыпты етіп көрсетуі мүмкін.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"31. The best solution proposed for reducing television-related aggression is:",options:["to turn television off","to watch more violent TV","to replace books with video games","to increase screen activities","to remove all school programs"],answers:[0],ru:"The key solution is to turn TV off.",kz:"Негізгі шешім — TV-ды өшіру.",source:"POFLIC, Unit 1.2"},
+{type:"multiple",q:"32. Possible causes of child labour include:",options:["family poverty","need to increase family income","factories hiring children for lower wages","children being easier to exploit","too many foreign holidays","TV-Turnoff programs","child allowance","museums and concerts"],answers:[0,1,2,3],ru:"Child labour may be caused by poverty, low wages and exploitation.",kz:"Child labour poverty, lower wages және exploitation себептерімен байланысты болуы мүмкін.",source:"POFLIC, Unit 1.2"},
+{type:"multiple",q:"33. Possible solutions to child labour include:",options:["strict enforcement of laws","public awareness of severe consequences","increasing employment opportunities for adults","overcoming poverty","encouraging factories to hire more children","ignoring the problem","reducing adult employment","making children work longer"],answers:[0,1,2,3],ru:"Solutions include strict laws, public awareness, adult employment and reducing poverty.",kz:"Шешімдер: strict laws, public awareness, adult employment және poverty азайту.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"34. Homework can cause friction especially between:",options:["parents and children","children and television channels","schools and video games","museums and concerts","state and child allowance"],answers:[0],ru:"Homework can cause friction between parents and children.",kz:"Homework ата-ана мен бала арасында friction тудыруы мүмкін.",source:"POFLIC, Unit 1.2"},
+{type:"multiple",q:"35. Homework pressure may create:",options:["anxiety","boredom","fatigue","emotional exhaustion","child trafficking","DINK","child laundering","empty nest"],answers:[0,1,2,3],ru:"Homework pressure may create anxiety, boredom, fatigue and emotional exhaustion.",kz:"Homework pressure anxiety, boredom, fatigue және emotional exhaustion тудыруы мүмкін.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"36. Parental involvement in homework is described as:",options:["the strongest predictor of better grades","always harmful","unrelated to learning","a form of child labour","a type of child trafficking"],answers:[0],ru:"Parental involvement in homework is described as the strongest predictor of better grades.",kz:"Parental involvement жақсы бағаның ең күшті көрсеткіші ретінде берілген.",source:"POFLIC, Unit 1.2"},
+{type:"multiple",q:"37. Parents have the most positive influence on homework when they:",options:["offer moral support","make appropriate resources available","discuss general issues","help when children specifically ask","control every minute","do all homework for children","punish every mistake","eliminate all independence"],answers:[0,1,2,3],ru:"Parents help most through moral support, resources, discussion and help when children ask.",kz:"Ата-аналар moral support, resources, discussion және бала сұрағанда көмектесу арқылы жақсы әсер етеді.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"38. A “media allowance” means:",options:["a limited amount of time allowed for media use","money paid by the state for children","a type of child labour","a child returning to an empty house","a family without children"],answers:[0],ru:"Media allowance — лимит времени на media use.",kz:"Media allowance — media қолдануға берілген уақыт шектеуі.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"39. “Verbal aggression” means:",options:["aggression expressed through words","violence involving only television","state payment to parents","pressure to study","returning to parents’ home"],answers:[0],ru:"Verbal aggression is aggression expressed through words.",kz:"Verbal aggression — сөз арқылы көрсетілетін агрессия.",source:"POFLIC, Unit 1.2"},
+{type:"single",q:"40. “Physical aggression” means:",options:["aggression involving physical actions","payment to children","a type of family structure","a gender-neutral term","a school subject"],answers:[0],ru:"Physical aggression is aggression involving physical actions.",kz:"Physical aggression — физикалық әрекет арқылы көрсетілетін агрессия.",source:"POFLIC, Unit 1.2"},
+{type:"multiple",q:"41. Choose the terms connected with media and screen behavior.",options:["media usage","TV-Turnoff","media allowance","screen activities","child laundering","DINK","progeny","baby battering"],answers:[0,1,2,3],ru:"Media usage, TV-Turnoff, media allowance and screen activities are connected with screen behavior.",kz:"Media usage, TV-Turnoff, media allowance және screen activities screen behavior-мен байланысты.",source:"POFLIC, Unit 1.2"}
 ]
 },
 
 unit13:{
 title:"Unit 1.3 — A Healthy Relationship of Children in Society",
 questions:[
-/* все вопросы unit13 */
+{type:"single",q:"1. The quote “Children have never been very good at listening to their elders, but they have never failed to imitate them” belongs to:",options:["Bill Cosby","James A. Baldwin","Eric Barker","Jackson Jesse","Daniel Pink"],answers:[1],ru:"Эта цитата принадлежит James A. Baldwin.",kz:"Бұл цитата James A. Baldwin-ге тиесілі.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"2. The quote “Intelligence isn’t everything. Without ethics and empathy really smart people can be scary” emphasizes the importance of:",options:["money and status","ethics and empathy","strict discipline only","physical strength","technological skills only"],answers:[1],ru:"Цитата подчёркивает важность ethics and empathy.",kz:"Цитата ethics және empathy маңызын көрсетеді.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"3. The quote “Your children need your presence more than your presents” means that children need:",options:["expensive gifts more than attention","parental presence and emotional support","only academic success","independence from parents","more punishment"],answers:[1],ru:"Presence — присутствие, presents — подарки. Детям важнее внимание родителей.",kz:"Presence — жанында болу, presents — сыйлықтар. Балаларға ата-ананың көңілі маңызды.",source:"POFLIC, Unit 1.3"},
+{type:"multiple",q:"4. The 5-step approach to quote analysis includes:",options:["context","terms","techniques","random guessing","significance","message","memorising without analysis","avoiding interpretation"],answers:[0,1,2,4,5],ru:"Quote analysis includes context, terms, techniques, significance and message.",kz:"Quote analysis кезеңдері: context, terms, techniques, significance және message.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"5. In quote analysis, “context” means:",options:["only grammar structure","background behind the quote","number of words in the quote","translation into another language","punctuation only"],answers:[1],ru:"Context means background behind the quote.",kz:"Context — цитатаның шығу тарихы мен жағдайы.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"6. In quote analysis, “terms” means:",options:["analysing key words and ambiguous words","counting paragraphs","finding only the author’s name","ignoring vocabulary","writing a conclusion only"],answers:[0],ru:"Terms means analysing key words and ambiguous words.",kz:"Terms — негізгі және екіұшты сөздерді талдау.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"7. In quote analysis, “techniques” refers to:",options:["symbolism, sentence structure, imagery and repetition","only spelling rules","only the year of publication","only the biography of the author","only translation"],answers:[0],ru:"Techniques include symbolism, sentence structure, imagery and repetition.",kz:"Techniques — symbolism, sentence structure, imagery, repetition сияқты тәсілдер.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"8. Young people in the global economy face new challenges at:",options:["an unparalleled pace","a very slow speed","no speed at all","a predictable level only","a local level only"],answers:[0],ru:"Young people face new challenges at an unparalleled pace.",kz:"Жастар жаңа қиындықтарға unparalleled pace-пен тап болады.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"9. The phrase “unforeseen hazards” means:",options:["unexpected dangers","planned holidays","school subjects","family presents","old traditions only"],answers:[0],ru:"Unforeseen hazards means unexpected risks or dangers.",kz:"Unforeseen hazards — күтпеген қауіп-қатерлер.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"10. In the future, the success of nations, companies and young workers will depend more on:",options:["analytical thinking only","creativity and flexible thinking","memorising old rules only","avoiding technology","physical strength"],answers:[1],ru:"Future success will depend on creativity and flexible thinking.",kz:"Болашақ табыс creativity және flexible thinking-ке байланысты.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"11. The expression “knowledge has now become like the light from the light bulb” means that knowledge is:",options:["available to everyone more easily","impossible to access","useful only in the West","no longer needed","dangerous for young people"],answers:[0],ru:"The metaphor means knowledge is widely available.",kz:"Бұл метафора білімнің қолжетімді екенін білдіреді.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"12. Edward de Bono is associated with:",options:["lateral thinking","juvenile detention","child allowance","Olympic sport","family rows"],answers:[0],ru:"Edward de Bono is associated with lateral thinking.",kz:"Edward de Bono lateral thinking идеясымен байланысты.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"13. Daniel Pink’s book A Whole New Mind predicts that future success will depend on:",options:["creative thinking","only analytical thinking","physical punishment","child labour","television watching"],answers:[0],ru:"Daniel Pink predicted that future success would depend on creative thinking.",kz:"Daniel Pink болашақ табыс creative thinking-ке байланысты болады деп болжаған.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"14. Knowledge-based professions such as banking and management are predicted to:",options:["wane as computers replace more jobs","become the only future jobs","disappear immediately","become unrelated to technology","depend only on physical work"],answers:[0],ru:"Knowledge-based professions may wane as computers replace more jobs.",kz:"Knowledge-based professions компьютерлер жұмысты алмастырған сайын әлсірейді.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"15. The phrase “think outside the analytical boxes” means:",options:["think creatively beyond traditional analytical limits","avoid thinking completely","use only memorised facts","reject all education","follow old systems only"],answers:[0],ru:"It means thinking creatively beyond narrow analytical patterns.",kz:"Бұл тар analytical ойлау шеңберінен шығып, шығармашылықпен ойлау.",source:"POFLIC, Unit 1.3"},
+{type:"multiple",q:"16. Young people are described as more prepared for the future because they are:",options:["more flexible","prepared to adapt to new situations","familiar with changing technology","completely free from problems","unable to learn new systems","against all creativity","proactive","less educated by nature"],answers:[0,1,2,6],ru:"Young people are flexible, ready to adapt, familiar with technology and proactive.",kz:"Жастар flexible, бейімделуге дайын, technology-мен таныс және proactive.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"17. Training for future uncertainty and creativity is mainly connected with:",options:["businesses rather than universities","punishment rather than education","television rather than workplace","parents rather than companies only","prisons rather than schools"],answers:[0],ru:"Businesses can provide training involving unpredictability and creativity.",kz:"Businesses uncertainty және creativity training бере алады.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"18. The statement “Governments could do more to help vulnerable people in society” is:",options:["an opinion","a fact","a statistic","a quotation from Daniel Pink","a definition"],answers:[0],ru:"“Could do more” expresses judgment or recommendation, so it is an opinion.",kz:"“Could do more” ұсыныс/баға білдіреді, сондықтан opinion.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"19. The statement “Governments help vulnerable people in society” is presented as:",options:["a fact","an opinion","a metaphor","a prediction","a quote"],answers:[0],ru:"This statement reports an action without judgment, so it is a fact.",kz:"Бұл бағалаусыз әрекетті хабарлайды, сондықтан fact.",source:"POFLIC, Unit 1.3"},
+{type:"multiple",q:"20. Choose the statements that clearly express opinion.",options:["Governments should do more to help vulnerable people in society.","The results of the social survey are clearly mistaken.","Sports like football, netball, rugby are taught in schools.","A minimum of two players are required to play tennis.","It would be a good idea to make citizenship classes compulsory.","The survey revealed that sales of digital technology are increasing.","Formal education fails miserably to meet the needs of society.","Some employees choose not to be a member of a trade union."],answers:[0,1,4,6],ru:"These options include judgment words such as should, clearly mistaken, good idea, fails miserably.",kz:"Бұл нұсқаларда should, clearly mistaken, good idea, fails miserably сияқты бағалау сөздері бар.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"21. The UNICEF video section states that the happiest children among 29 rich industrialized nations are from:",options:["Kazakhstan","the Netherlands","China","Australia","the United States"],answers:[1],ru:"The video section says children from the Netherlands are the happiest.",kz:"Video section бойынша ең бақытты балалар the Netherlands елінен.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"22. Juvenile justice is mainly aimed at young people who have:",options:["committed a crime","won a competition","studied abroad","watched too much TV","received child benefit"],answers:[0],ru:"Juvenile justice is for young people who have committed a crime.",kz:"Juvenile justice — қылмыс жасаған жастарға қатысты.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"23. The main duty of juvenile justice is to:",options:["teach, inform and prevent further breaking of the law","ruin young people’s lives in jail","punish every young person as strictly as adults","ignore family problems","remove education"],answers:[0],ru:"Juvenile justice teaches, informs and prevents further crimes.",kz:"Juvenile justice teach, inform және future crimes-ті prevent етеді.",source:"POFLIC, Unit 1.3"},
+{type:"multiple",q:"24. Reasons for juvenile crimes may include:",options:["poor bringing up","problems in the family","problems at school","misunderstandings with friends","perfect financial stability","winning Olympic medals","high academic success only","absence of any social problem"],answers:[0,1,2,3],ru:"Reasons include poor bringing up, family problems, school problems and misunderstandings with friends.",kz:"Себептер: poor bringing up, family problems, school problems, misunderstandings with friends.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"25. If a young person under 18 commits a crime, the text says that:",options:["parents pay the fine and control the teenager strictly","the child is always jailed for life","teachers receive a fine","the crime is ignored","the teenager cannot be corrected"],answers:[0],ru:"If the young person is under 18, parents pay the fine and control the teenager.",kz:"18 жасқа толмаған болса, ата-анасы айыппұл төлеп, баланы қадағалайды.",source:"POFLIC, Unit 1.3"},
+{type:"single",q:"26. Juvenile justice is aimed to prevent a person from crimes, but not to:",options:["ruin their life in jail","educate them","inform them","work with social services","understand motives"],answers:[0],ru:"Juvenile justice should prevent crimes, not ruin a young person’s life in jail.",kz:"Juvenile justice адамның өмірін түрмеде құрту үшін емес, қылмыстың алдын алу үшін қажет.",source:"POFLIC, Unit 1.3"}
 ]
 }
 };
 
-/* ВОТ ЭТИ ФУНКЦИИ ДОЛЖНЫ БЫТЬ ПОСЛЕ DATA */
-
-function getQuestionNumber(qText){
-  const match = String(qText).match(/^(\d+)\./);
-  return match ? Number(match[1]) : null;
-}
-
-function removeQuestions(unitKey, numbersToRemove){
-  DATA[unitKey].questions = DATA[unitKey].questions
-    .filter(q => !numbersToRemove.includes(getQuestionNumber(q.q)))
-    .map((q, index) => {
-      q.q = q.q.replace(/^\d+\./, (index + 1) + ".");
-      return q;
-    });
-}
-
-removeQuestions("unit11", [4, 5, 6, 7, 14]);
-
-removeQuestions("unit12", [23, 31, 32, 33]);
-
-removeQuestions("unit13", [
-  8, 15, 19,
-  30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
-  41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52
-]);
-
-function letter(i){
-  return String.fromCharCode(65+i);
-}
+function letter(i){return String.fromCharCode(65+i)}
 
 function renderUnit(key){
-  const unit = DATA[key];
-  const container = document.getElementById("quiz-" + key);
-  container.innerHTML = "";
-
-  unit.questions.forEach((q, qi) => {
-    const inputType = q.type === "multiple" ? "checkbox" : "radio";
-
-    let html = `<div class="question">
-      <span class="qtype">${q.type === "multiple" ? "Multiple answers" : "Single answer"}</span>
+  const unit=DATA[key];
+  const container=document.getElementById("quiz-"+key);
+  container.innerHTML="";
+  unit.questions.forEach((q,qi)=>{
+    const inputType=q.type==="multiple"?"checkbox":"radio";
+    let html=`<div class="question">
+      <span class="qtype">${q.type==="multiple"?"Multiple answers":"Single answer"}</span>
       <div class="question-title">${q.q}</div>`;
-
-    q.options.forEach((opt, oi) => {
-      html += `<label>
-        <input type="${inputType}" name="${key}-q${qi}" value="${oi}">
-        ${letter(oi)}) ${opt}
-      </label>`;
+    q.options.forEach((opt,oi)=>{
+      html+=`<label><input type="${inputType}" name="${key}-q${qi}" value="${oi}"> ${letter(oi)}) ${opt}</label>`;
     });
-
-    html += `</div>`;
-    container.innerHTML += html;
+    html+=`</div>`;
+    container.innerHTML+=html;
   });
 }
 
 function arraysEqual(a,b){
-  if(a.length !== b.length) return false;
-
-  const aa = [...a].sort((x,y) => x-y);
-  const bb = [...b].sort((x,y) => x-y);
-
-  return aa.every((v,i) => v === bb[i]);
+  if(a.length!==b.length)return false;
+  const aa=[...a].sort((x,y)=>x-y);
+  const bb=[...b].sort((x,y)=>x-y);
+  return aa.every((v,i)=>v===bb[i]);
 }
 
 function getSelected(key,qi){
-  return Array.from(document.querySelectorAll(`input[name="${key}-q${qi}"]:checked`))
-    .map(x => Number(x.value));
+  return Array.from(document.querySelectorAll(`input[name="${key}-q${qi}"]:checked`)).map(x=>Number(x.value));
 }
 
 function answerText(q,arr){
-  if(!arr || arr.length === 0) return "Ответ не выбран";
-  return arr.map(i => `${letter(i)}) ${q.options[i]}`).join("; ");
+  if(!arr||arr.length===0)return "Ответ не выбран";
+  return arr.map(i=>`${letter(i)}) ${q.options[i]}`).join("; ");
 }
 
 function checkUnit(key){
-  const unit = DATA[key];
-  let score = 0;
-  let details = "";
-
-  unit.questions.forEach((q, qi) => {
-    const selected = getSelected(key, qi);
-    const ok = arraysEqual(selected, q.answers);
-
-    if(ok) score++;
-
-    details += `<div class="answer-card ${ok ? "correct" : "wrong"}">
-      <div class="${ok ? "correct-text" : "wrong-text"}">${ok ? "✔" : "✘"} ${q.q}</div>
+  const unit=DATA[key];
+  let score=0;
+  let details="";
+  unit.questions.forEach((q,qi)=>{
+    const selected=getSelected(key,qi);
+    const ok=arraysEqual(selected,q.answers);
+    if(ok)score++;
+    details+=`<div class="answer-card ${ok?"correct":"wrong"}">
+      <div class="${ok?"correct-text":"wrong-text"}">${ok?"✔":"✘"} ${q.q}</div>
       <div class="explain">
         <b>Правильный ответ:</b> ${answerText(q,q.answers)}<br>
         <b>Ваш ответ:</b> ${answerText(q,selected)}<br><br>
@@ -117,40 +420,31 @@ function checkUnit(key){
       </div>
     </div>`;
   });
-
-  const percent = Math.round(score / unit.questions.length * 100);
-
-  let level = percent >= 80
-    ? "Жақсы нәтиже / Хороший результат"
-    : percent >= 50
-      ? "Орташа нәтиже / Средний результат"
-      : "Қайталау керек / Нужно повторить";
-
-  document.getElementById("result-" + key).innerHTML = `<div class="summary">
+  const percent=Math.round(score/unit.questions.length*100);
+  let level=percent>=80?"Жақсы нәтиже / Хороший результат":percent>=50?"Орташа нәтиже / Средний результат":"Қайталау керек / Нужно повторить";
+  document.getElementById("result-"+key).innerHTML=`<div class="summary">
     <h2>${unit.title}</h2>
     <h2>${score} / ${unit.questions.length} (${percent}%)</h2>
     <p><b>${level}</b></p>
-  </div>` + details;
-
-  document.getElementById("result-" + key).scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
+  </div>`+details;
+  document.getElementById("result-"+key).scrollIntoView({behavior:"smooth",block:"start"});
 }
 
 renderUnit("unit11");
 renderUnit("unit12");
 renderUnit("unit13");
 
-document.addEventListener("copy", function(e){
+document.addEventListener("copy",function(e){
   e.preventDefault();
   alert("Бұл материал авторлық құқықпен қорғалған. Көшіруге рұқсат жоқ. © @elnazm_ln");
 });
 
-document.addEventListener("keydown", function(e){
-  if((e.ctrlKey || e.metaKey) && ["c","u","s","p"].includes(e.key.toLowerCase())){
+document.addEventListener("keydown",function(e){
+  if((e.ctrlKey||e.metaKey) && ["c","u","s","p"].includes(e.key.toLowerCase())){
     e.preventDefault();
     alert("Көшіру/сақтау шектелген. © @elnazm_ln");
   }
 });
 </script>
+</body>
+</html>
