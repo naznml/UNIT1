@@ -261,6 +261,29 @@ button:hover{background:#08306f}
 
 <script>
 const DATA = {
+function getQuestionNumber(qText){
+  const match = String(qText).match(/^(\d+)\./);
+  return match ? Number(match[1]) : null;
+}
+
+function removeQuestions(unitKey, numbersToRemove){
+  DATA[unitKey].questions = DATA[unitKey].questions
+    .filter(q => !numbersToRemove.includes(getQuestionNumber(q.q)))
+    .map((q, index) => {
+      q.q = q.q.replace(/^\d+\./, (index + 1) + ".");
+      return q;
+    });
+}
+
+removeQuestions("unit11", [4, 5, 6, 7, 14]);
+
+removeQuestions("unit12", [23, 31, 32, 33]);
+
+removeQuestions("unit13", [
+  8, 15, 19,
+  30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+  41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52
+]);
 unit11:{
 title:"Unit 1.1 — A World Fit for Children",
 questions:[
