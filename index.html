@@ -372,7 +372,7 @@ function renderUnit(key){
     const inputType=q.type==="multiple"?"checkbox":"radio";
     let html=`<div class="question">
       <span class="qtype">${q.type==="multiple"?"Multiple answers":"Single answer"}</span>
-      <div class="question-title">${q.q}</div>`;
+      <div class="question-title">${qi + 1}. ${q.q.replace(/^\d+\.\s*/, "")}</div>
     q.options.forEach((opt,oi)=>{
       html+=`<label><input type="${inputType}" name="${key}-q${qi}" value="${oi}"> ${letter(oi)}) ${opt}</label>`;
     });
@@ -406,7 +406,7 @@ function checkUnit(key){
     const ok=arraysEqual(selected,q.answers);
     if(ok)score++;
     details+=`<div class="answer-card ${ok?"correct":"wrong"}">
-      <div class="${ok?"correct-text":"wrong-text"}">${ok?"✔":"✘"} ${q.q}</div>
+      <div class="${ok?"correct-text":"wrong-text"}">${ok?"✔":"✘"} ${qi + 1}. ${q.q.replace(/^\d+\.\s*/, "")}</div>
       <div class="explain">
         <b>Правильный ответ:</b> ${answerText(q,q.answers)}<br>
         <b>Ваш ответ:</b> ${answerText(q,selected)}<br><br>
