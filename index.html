@@ -368,14 +368,19 @@ function renderUnit(key){
   const unit=DATA[key];
   const container=document.getElementById("quiz-"+key);
   container.innerHTML="";
+
   unit.questions.forEach((q,qi)=>{
     const inputType=q.type==="multiple"?"checkbox":"radio";
+
     let html=`<div class="question">
       <span class="qtype">${q.type==="multiple"?"Multiple answers":"Single answer"}</span>
       <div class="question-title">${qi + 1}. ${q.q.replace(/^\d+\.\s*/, "")}</div>
+    `;
+
     q.options.forEach((opt,oi)=>{
       html+=`<label><input type="${inputType}" name="${key}-q${qi}" value="${oi}"> ${letter(oi)}) ${opt}</label>`;
     });
+
     html+=`</div>`;
     container.innerHTML+=html;
   });
