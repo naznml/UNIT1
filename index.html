@@ -110,7 +110,7 @@ function renderSynonyms(q){
   return `<div class="syn-box"><b>${title}:</b><ul>${items}</ul></div>`;
 }
 function completedQuestion(q,correctAnswers){
-  const correct=correctAnswers.map(i=>q.ro[i]).join(' / ');
+  const correct=correctAnswers.map(i=>q.renderedOptions[i]).join(' / ');
   if(q.q.includes('__________')) return q.q.replace('__________', correct);
   if(q.q.startsWith('Find three')) return `${q.q} → ${correct}`;
   if(q.q.startsWith('Choose')) return correct;
