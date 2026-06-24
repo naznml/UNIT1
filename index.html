@@ -206,6 +206,20 @@ button:hover{background:#08306f}
   margin:8px 0;
 }
 
+
+.lang-switch{display:flex;gap:10px;justify-content:center;margin:14px 0 18px;position:relative;z-index:3}
+.lang-switch button{width:auto;margin:0;padding:10px 16px;border-radius:999px;background:white;color:#0d47a1;border:2px solid #d7e8ff;font-size:15px}
+.lang-switch button.active{background:#0d47a1;color:white;border-color:#0d47a1}
+.lang-kz .ru{display:none!important}
+.lang-ru .kz{display:none!important}
+.feedback{display:none;margin-top:12px;background:white;border:1px solid #dfe7ef;border-radius:12px;padding:12px;line-height:1.55}
+.feedback.show{display:block}
+label.correct-option{background:#e8f5e9;border-color:#2e7d32;color:#1b5e20;font-weight:bold}
+label.wrong-option{background:#ffebee;border-color:#c62828;color:#b71c1c;font-weight:bold}
+.question.done{border-left-color:#2e7d32}
+.question.missed{border-left-color:#c62828}
+.inline-score{background:#e3f2fd;border:1px solid #bbdefb;color:#0d47a1;border-radius:14px;padding:12px;margin:12px 0;font-weight:bold;text-align:center;position:relative;z-index:2}
+
 @media(max-width:700px){
   .wrapper{padding:12px}
   .hero h1{font-size:24px}
@@ -217,25 +231,36 @@ button:hover{background:#08306f}
 </style>
 </head>
 
-<body oncontextmenu="return false">
+<body oncontextmenu="return false" class="lang-kz">
 <div class="wrapper">
 
 <div class="hero">
   <h1>Professional English M019</h1>
   <p><b>UNIT 1 — The Status Quo of Children on the Global Scene</b></p>
-  <p>Exam-style practice by subunits: Unit 1.1, Unit 1.2, Unit 1.3</p>
-  <span class="badge">Separate result for each subunit</span>
+  <p class="kz">КТ форматына жақын дайындық: Unit 1.1, Unit 1.2, Unit 1.3</p>
+  <p class="ru">Подготовка в формате КТ: Unit 1.1, Unit 1.2, Unit 1.3</p>
+  <span class="badge kz">Әр subunit үшін бөлек нәтиже</span>
+  <span class="badge ru">Отдельный результат для каждого subunit</span>
+</div>
+
+<div class="lang-switch">
+  <button id="btn-kz" class="active" onclick="setLang('kz')">Қазақша</button>
+  <button id="btn-ru" onclick="setLang('ru')">Русский</button>
 </div>
 
 <div class="card">
-  <h2>Инструкция</h2>
-  <p>Әр блокты бөлек тапсыруға болады. Егер тек <b>Unit 1.1</b> тапсырсаңыз, сол блоктың астындағы <b>Показать результат Unit 1.1</b> батырмасын басыңыз.</p>
-  <p class="small">Single answer — бір дұрыс жауап. Multiple answers — бірнеше дұрыс жауап, checkbox арқылы белгілеңіз.</p>
+  <h2 class="kz">Нұсқаулық</h2>
+  <h2 class="ru">Инструкция</h2>
+  <p class="kz">Әр блокты бөлек тапсыруға болады. Тест сұрақтары ағылшын тілінде, ал нәтиже мен түсіндірме таңдалған тілде шығады.</p>
+  <p class="ru">Каждый блок можно проходить отдельно. Вопросы теста остаются на английском, а результат и объяснение выходят на выбранном языке.</p>
+  <p class="small kz">Single answer — бір дұрыс жауап. Multiple answers — бірнеше дұрыс жауап, checkbox арқылы белгілеңіз.</p>
+  <p class="small ru">Single answer — один правильный ответ. Multiple answers — несколько правильных ответов, выбирайте через checkbox.</p>
 </div>
 
 <div class="copyright-box">
   <b>© @elnazm_ln, 2026. All rights reserved.</b><br>
-  Бұл материал авторлық құқықпен қорғалған. Көшіруге, қайта сатуға, басқа сайтқа жариялауға және автордың рұқсатынсыз таратуға болмайды.
+  <span class="kz">Бұл материал авторлық құқықпен қорғалған. Көшіруге, қайта сатуға, басқа сайтқа жариялауға және автордың рұқсатынсыз таратуға болмайды.</span>
+  <span class="ru">Материал защищён авторским правом. Запрещено копировать, перепродавать, публиковать на других сайтах и распространять без разрешения автора.</span>
 </div>
 
 <div class="nav">
@@ -251,23 +276,41 @@ button:hover{background:#08306f}
   </div>
   
   <div class="note-box">
-    <h3>Маңызды сөздер мен негізгі ұғымдар — Unit 1.1</h3>
-    <ul>
-      <li><b>gifted</b> — ерекше қабілеті бар, дарынды.</li>
-      <li><b>prodigy</b> — жас кезінен ерекше қабілет көрсететін адам.</li>
-      <li><b>high flyer</b> — жоғары жетістікке жеткен, табысқа ұмтылатын адам.</li>
-      <li><b>peers</b> — құрдастар, жасы немесе әлеуметтік орны ұқсас адамдар.</li>
-      <li><b>adulation</b> — шектен тыс мақтау, таңдану.</li>
-      <li><b>demanding parents</b> — баладан жоғары нәтиже күтетін ата-аналар.</li>
-      <li><b>stimulating environment</b> — баланың дамуына әсер ететін қолайлы орта.</li>
-      <li><b>over-parenting</b> — баланың өмірін шамадан тыс бақылау.</li>
-      <li><b>unconditional love</b> — баланы жетістігіне тәуелсіз қолдау.</li>
-      <li><b>gender-inclusive language</b> — әйел мен ер адамды тең көрсететін тілдік қолданыс.</li>
-    </ul>
-    <p><b>Негізгі идея:</b> бала тұлғасының дамуына отбасы, құрдастар, денсаулық, мотивация, қауіпсіз қарым-қатынас, дербестік және қолайлы мәдени-білімдік орта әсер етеді.</p>
+    <div class="kz">
+      <h3>Маңызды сөздер мен негізгі ұғымдар — Unit 1.1</h3>
+      <ul>
+        <li><b>gifted</b> — ерекше қабілеті бар, дарынды.</li>
+        <li><b>prodigy</b> — жас кезінен ерекше қабілет көрсететін адам.</li>
+        <li><b>high flyer</b> — жоғары жетістікке жеткен, табысқа ұмтылатын адам.</li>
+        <li><b>peers</b> — құрдастар, жасы немесе әлеуметтік орны ұқсас адамдар.</li>
+        <li><b>adulation</b> — шектен тыс мақтау, таңдану.</li>
+        <li><b>demanding parents</b> — баладан жоғары нәтиже күтетін ата-аналар.</li>
+        <li><b>stimulating environment</b> — баланың дамуына әсер ететін қолайлы орта.</li>
+        <li><b>over-parenting</b> — баланың өмірін шамадан тыс бақылау.</li>
+        <li><b>unconditional love</b> — баланы жетістігіне тәуелсіз қолдау.</li>
+        <li><b>gender-inclusive language</b> — әйел мен ер адамды тең көрсететін тілдік қолданыс.</li>
+      </ul>
+      <p><b>Негізгі идея:</b> бала тұлғасының дамуына отбасы, құрдастар, денсаулық, мотивация, қауіпсіз қарым-қатынас, дербестік және қолайлы мәдени-білімдік орта әсер етеді.</p>
+    </div>
+    <div class="ru">
+      <h3>Важные слова и основные понятия — Unit 1.1</h3>
+      <ul>
+        <li><b>gifted</b> — одарённый, обладающий особыми способностями.</li>
+        <li><b>prodigy</b> — человек, проявляющий исключительные способности в раннем возрасте.</li>
+        <li><b>high flyer</b> — успешный человек, стремящийся к дальнейшим достижениям.</li>
+        <li><b>peers</b> — ровесники, люди одного возраста или социального положения.</li>
+        <li><b>adulation</b> — чрезмерное восхищение или похвала.</li>
+        <li><b>demanding parents</b> — родители, ожидающие от ребёнка высоких результатов.</li>
+        <li><b>stimulating environment</b> — среда, стимулирующая развитие ребёнка.</li>
+        <li><b>over-parenting</b> — чрезмерный родительский контроль.</li>
+        <li><b>unconditional love</b> — поддержка ребёнка независимо от его достижений.</li>
+        <li><b>gender-inclusive language</b> — языковая форма, равноправно представляющая женщин и мужчин.</li>
+      </ul>
+      <p><b>Основная идея:</b> на развитие личности ребёнка влияют семья, ровесники, здоровье, мотивация, безопасная привязанность, самостоятельность и культурно-образовательная среда.</p>
+    </div>
   </div>
   <div id="quiz-unit11"></div>
-  <button onclick="checkUnit('unit11')">Показать результат Unit 1.1</button>
+  <button onclick="checkUnit('unit11')"><span class="kz">Нәтижені көрсету Unit 1.1</span><span class="ru">Показать результат Unit 1.1</span></button>
   <div id="result-unit11" class="result"></div>
 </section>
 
@@ -278,25 +321,39 @@ button:hover{background:#08306f}
   </div>
   
   <div class="note-box">
-    <h3>Маңызды сөздер мен негізгі ұғымдар — Unit 1.2</h3>
-    <ul>
-      <li><b>child abuse</b> — балаға физикалық, психологиялық немесе сексуалдық зорлық көрсету.</li>
-      <li><b>child neglect</b> — баланың негізгі қажеттіліктерін, күтімін, қауіпсіздігін елемеу.</li>
-      <li><b>child labour</b> — баланың заңсыз немесе қанаушылық еңбекке тартылуы.</li>
-      <li><b>child trafficking</b> — баланы қанау мақсатында заңсыз тасымалдау немесе пайдалану.</li>
-      <li><b>child abduction</b> — баланы ата-анасынан немесе қамқоршысынан заңсыз алып кету.</li>
-      <li><b>child laundering</b> — баланы заңсыз жолмен асырап алуға беру немесе сату әрекеті.</li>
-      <li><b>baby battering</b> — кішкентай балаға күш қолдану.</li>
-      <li><b>latchkey child</b> — ата-анасы жұмыста болғандықтан, мектептен кейін бос үйге келетін бала.</li>
-      <li><b>the empty nest</b> — балалары есейіп, үйден кеткеннен кейін ата-ананың жалғыздық сезінуі.</li>
-      <li><b>revolving door syndrome</b> — ересек балалардың қаржылық немесе басқа себеппен ата-анасының үйіне қайта оралуы.</li>
-      <li><b>media aggression</b> — теледидар, видео, video games арқылы агрессияның күшеюі немесе қалыптануы.</li>
-      <li><b>homework pressure</b> — үй тапсырмасына байланысты ата-ана мен бала арасындағы қысым, шаршау, мазасыздық.</li>
-    </ul>
-    <p><b>Негізгі идея:</b> қазіргі қоғамдағы балалардың әлеуметтік жағдайы зорлық-зомбылық, neglect, child labour, trafficking, media influence және отбасылық қысым сияқты мәселелер арқылы қарастырылады.</p>
+    <div class="kz">
+      <h3>Маңызды сөздер мен негізгі ұғымдар — Unit 1.2</h3>
+      <ul>
+        <li><b>child abuse</b> — балаға физикалық, психологиялық немесе сексуалдық зорлық көрсету.</li>
+        <li><b>child neglect</b> — баланың негізгі қажеттіліктерін, күтімін, қауіпсіздігін елемеу.</li>
+        <li><b>child labour</b> — баланың заңсыз немесе қанаушылық еңбекке тартылуы.</li>
+        <li><b>child trafficking</b> — баланы қанау мақсатында заңсыз тасымалдау немесе пайдалану.</li>
+        <li><b>child abduction</b> — баланы ата-анасынан немесе қамқоршысынан заңсыз алып кету.</li>
+        <li><b>child laundering</b> — баланы заңсыз жолмен асырап алуға беру немесе сату әрекеті.</li>
+        <li><b>latchkey child</b> — ата-анасы жұмыста болғандықтан, мектептен кейін бос үйге келетін бала.</li>
+        <li><b>media aggression</b> — TV, video және video games арқылы агрессияның қалыптануы.</li>
+        <li><b>homework pressure</b> — үй тапсырмасына байланысты ата-ана мен бала арасындағы қысым.</li>
+      </ul>
+      <p><b>Негізгі идея:</b> қазіргі қоғамдағы балалардың әлеуметтік жағдайы зорлық-зомбылық, neglect, child labour, trafficking, media influence және отбасылық қысым арқылы қарастырылады.</p>
+    </div>
+    <div class="ru">
+      <h3>Важные слова и основные понятия — Unit 1.2</h3>
+      <ul>
+        <li><b>child abuse</b> — физическое, психологическое или сексуальное насилие над ребёнком.</li>
+        <li><b>child neglect</b> — игнорирование базовых потребностей, ухода и безопасности ребёнка.</li>
+        <li><b>child labour</b> — незаконное или эксплуатационное использование детского труда.</li>
+        <li><b>child trafficking</b> — незаконная перевозка или использование детей с целью эксплуатации.</li>
+        <li><b>child abduction</b> — незаконное изъятие ребёнка у родителей или опекунов.</li>
+        <li><b>child laundering</b> — незаконная передача или продажа ребёнка под видом усыновления.</li>
+        <li><b>latchkey child</b> — ребёнок, возвращающийся после школы в пустой дом.</li>
+        <li><b>media aggression</b> — усиление или нормализация агрессии через TV, video и video games.</li>
+        <li><b>homework pressure</b> — давление и конфликт между родителями и ребёнком из-за домашнего задания.</li>
+      </ul>
+      <p><b>Основная идея:</b> социальное положение детей рассматривается через насилие, neglect, child labour, trafficking, влияние медиа и семейное давление.</p>
+    </div>
   </div>
   <div id="quiz-unit12"></div>
-  <button onclick="checkUnit('unit12')">Показать результат Unit 1.2</button>
+  <button onclick="checkUnit('unit12')"><span class="kz">Нәтижені көрсету Unit 1.2</span><span class="ru">Показать результат Unit 1.2</span></button>
   <div id="result-unit12" class="result"></div>
 </section>
 
@@ -307,22 +364,39 @@ button:hover{background:#08306f}
   </div>
   
   <div class="note-box">
-    <h3>Маңызды сөздер мен негізгі ұғымдар — Unit 1.3</h3>
-    <ul>
-      <li><b>ethics</b> — адамгершілік қағидалары, дұрыс пен бұрысты ажырату өлшемі.</li>
-      <li><b>empathy</b> — басқа адамның сезімін түсіну және сезіне білу қабілеті.</li>
-      <li><b>parental presence</b> — баланың жанында болу, эмоциялық қолдау көрсету.</li>
-      <li><b>quote analysis</b> — афоризмді context, terms, techniques, significance, message арқылы талдау.</li>
-      <li><b>creative thinking</b> — жаңа, ерекше, икемді ойлау қабілеті.</li>
-      <li><b>lateral thinking</b> — мәселені дәстүрлі емес жолмен шешуге бағытталған ойлау.</li>
-      <li><b>fact</b> — дәлелденетін, бағалаусыз ақпарат.</li>
-      <li><b>opinion</b> — бағалау, көзқарас немесе ұсыныс білдіретін пікір.</li>
-      <li><b>juvenile justice</b> — кәмелетке толмаған құқық бұзушыларға қатысты әділет жүйесі.</li>
-    </ul>
-    <p><b>Негізгі идея:</b> балалар мен жастардың қоғамдағы орны құндылықтар, этика, эмпатия, шығармашылық ойлау, болашаққа бейімделу және құқықтық жауапкершілік арқылы қарастырылады.</p>
+    <div class="kz">
+      <h3>Маңызды сөздер мен негізгі ұғымдар — Unit 1.3</h3>
+      <ul>
+        <li><b>ethics</b> — адамгершілік қағидалары, дұрыс пен бұрысты ажырату өлшемі.</li>
+        <li><b>empathy</b> — басқа адамның сезімін түсіну және сезіне білу қабілеті.</li>
+        <li><b>parental presence</b> — баланың жанында болу, эмоциялық қолдау көрсету.</li>
+        <li><b>quote analysis</b> — афоризмді context, terms, techniques, significance, message арқылы талдау.</li>
+        <li><b>creative thinking</b> — жаңа, ерекше, икемді ойлау қабілеті.</li>
+        <li><b>lateral thinking</b> — мәселені дәстүрлі емес жолмен шешуге бағытталған ойлау.</li>
+        <li><b>fact</b> — дәлелденетін, бағалаусыз ақпарат.</li>
+        <li><b>opinion</b> — бағалау, көзқарас немесе ұсыныс білдіретін пікір.</li>
+        <li><b>juvenile justice</b> — кәмелетке толмаған құқық бұзушыларға қатысты әділет жүйесі.</li>
+      </ul>
+      <p><b>Негізгі идея:</b> балалар мен жастардың қоғамдағы орны құндылықтар, этика, эмпатия, шығармашылық ойлау, болашаққа бейімделу және құқықтық жауапкершілік арқылы қарастырылады.</p>
+    </div>
+    <div class="ru">
+      <h3>Важные слова и основные понятия — Unit 1.3</h3>
+      <ul>
+        <li><b>ethics</b> — нравственные принципы, критерии добра и ответственности.</li>
+        <li><b>empathy</b> — способность понимать чувства другого человека.</li>
+        <li><b>parental presence</b> — внимание и эмоциональная поддержка родителей.</li>
+        <li><b>quote analysis</b> — анализ афоризма через context, terms, techniques, significance, message.</li>
+        <li><b>creative thinking</b> — способность мыслить гибко и нестандартно.</li>
+        <li><b>lateral thinking</b> — нестандартный способ решения проблем.</li>
+        <li><b>fact</b> — проверяемая информация без оценки.</li>
+        <li><b>opinion</b> — оценочное суждение, взгляд или рекомендация.</li>
+        <li><b>juvenile justice</b> — система правосудия в отношении несовершеннолетних правонарушителей.</li>
+      </ul>
+      <p><b>Основная идея:</b> положение детей и молодёжи в обществе раскрывается через ценности, этику, эмпатию, творчество, адаптацию к будущему и правовую ответственность.</p>
+    </div>
   </div>
   <div id="quiz-unit13"></div>
-  <button onclick="checkUnit('unit13')">Показать результат Unit 1.3</button>
+  <button onclick="checkUnit('unit13')"><span class="kz">Нәтижені көрсету Unit 1.3</span><span class="ru">Показать результат Unit 1.3</span></button>
   <div id="result-unit13" class="result"></div>
 </section>
 
@@ -454,9 +528,47 @@ questions:[
 }
 };
 
-function letter(i){
-  return String.fromCharCode(65+i);
+let currentLang = "kz";
+
+const UI = {
+  kz:{
+    single:"Бір дұрыс жауап",
+    multiple:"Бірнеше дұрыс жауап",
+    correct:"Дұрыс жауап",
+    your:"Сіздің жауабыңыз",
+    noanswer:"Жауап таңдалмаған",
+    explanation:"Түсіндірме",
+    source:"Дереккөз",
+    good:"Жақсы нәтиже",
+    mid:"Орташа нәтиже",
+    low:"Қайталау керек",
+    score:"Нәтиже"
+  },
+  ru:{
+    single:"Один правильный ответ",
+    multiple:"Несколько правильных ответов",
+    correct:"Правильный ответ",
+    your:"Ваш ответ",
+    noanswer:"Ответ не выбран",
+    explanation:"Объяснение",
+    source:"Источник",
+    good:"Хороший результат",
+    mid:"Средний результат",
+    low:"Нужно повторить",
+    score:"Результат"
+  }
+};
+
+function setLang(lang){
+  currentLang = lang;
+  document.body.classList.toggle("lang-kz", lang === "kz");
+  document.body.classList.toggle("lang-ru", lang === "ru");
+  document.getElementById("btn-kz").classList.toggle("active", lang === "kz");
+  document.getElementById("btn-ru").classList.toggle("active", lang === "ru");
+  renderAll(false);
 }
+
+function letter(i){ return String.fromCharCode(65+i); }
 
 function shuffleArray(arr){
   const a = [...arr];
@@ -468,132 +580,126 @@ function shuffleArray(arr){
 }
 
 function prepareQuestion(q){
-  const mapped = q.options.map((text, originalIndex)=>({
-    text:text,
-    originalIndex:originalIndex
-  }));
-
+  if(q.renderedOptions && q.renderedAnswers) return;
+  const mapped = q.options.map((text, originalIndex)=>({ text, originalIndex }));
   const shuffled = shuffleArray(mapped);
-
   q.renderedOptions = shuffled.map(x=>x.text);
   q.renderedAnswers = shuffled
     .map((x,newIndex)=>q.answers.includes(x.originalIndex) ? newIndex : -1)
     .filter(x=>x !== -1);
 }
 
-function renderUnit(key){
+function renderUnit(key, reset=true){
   const unit = DATA[key];
   const container = document.getElementById("quiz-" + key);
   container.innerHTML = "";
 
   unit.questions.forEach((q,qi)=>{
+    if(reset){ q.renderedOptions = null; q.renderedAnswers = null; }
     prepareQuestion(q);
-
     const inputType = q.type === "multiple" ? "checkbox" : "radio";
 
-    let html = `<div class="question">
-      <span class="qtype">${q.type === "multiple" ? "Multiple answers" : "Single answer"}</span>
-      <div class="question-title">${qi + 1}. ${q.q.replace(/^\d+\.\s*/, "")}</div>
-    `;
+    let html = `<div class="question" id="${key}-box-${qi}">
+      <span class="qtype">${q.type === "multiple" ? UI[currentLang].multiple : UI[currentLang].single}</span>
+      <div class="question-title">${qi + 1}. ${q.q.replace(/^\d+\.\s*/, "")}</div>`;
 
     q.renderedOptions.forEach((opt,oi)=>{
-      html += `<label>
+      html += `<label data-option="${oi}" id="${key}-q${qi}-opt${oi}">
         <input type="${inputType}" name="${key}-q${qi}" value="${oi}">
         ${letter(oi)}) ${opt}
       </label>`;
     });
 
-    html += `</div>`;
+    html += `<div class="feedback" id="${key}-feedback-${qi}"></div></div>`;
     container.innerHTML += html;
   });
 }
 
+function renderAll(reset=true){
+  renderUnit("unit11", reset);
+  renderUnit("unit12", reset);
+  renderUnit("unit13", reset);
+  document.querySelectorAll('.result').forEach(x=>x.innerHTML='');
+}
+
 function arraysEqual(a,b){
   if(a.length !== b.length) return false;
-
   const aa = [...a].sort((x,y)=>x-y);
   const bb = [...b].sort((x,y)=>x-y);
-
   return aa.every((v,i)=>v === bb[i]);
 }
 
 function getSelected(key,qi){
-  return Array.from(
-    document.querySelectorAll(`input[name="${key}-q${qi}"]:checked`)
-  ).map(x=>Number(x.value));
+  return Array.from(document.querySelectorAll(`input[name="${key}-q${qi}"]:checked`)).map(x=>Number(x.value));
 }
 
 function answerText(q,arr){
-  if(!arr || arr.length === 0) return "Ответ не выбран";
+  if(!arr || arr.length === 0) return UI[currentLang].noanswer;
+  return arr.map(i=>`${letter(i)}) ${q.renderedOptions[i]}`).join("; ");
+}
 
-  return arr
-    .map(i=>`${letter(i)}) ${q.renderedOptions[i]}`)
-    .join("; ");
+function clearMarks(key, qi){
+  document.getElementById(`${key}-box-${qi}`).classList.remove('done','missed');
+  document.querySelectorAll(`label[id^="${key}-q${qi}-opt"]`).forEach(label=>{
+    label.classList.remove('correct-option','wrong-option');
+  });
 }
 
 function checkUnit(key){
   const unit = DATA[key];
   let score = 0;
-  let details = "";
 
   unit.questions.forEach((q,qi)=>{
     const selected = getSelected(key,qi);
     const correctAnswers = q.renderedAnswers;
     const ok = arraysEqual(selected,correctAnswers);
-
     if(ok) score++;
 
-    details += `<div class="answer-card ${ok ? "correct" : "wrong"}">
-      <div class="${ok ? "correct-text" : "wrong-text"}">
-        ${ok ? "✔" : "✘"} ${qi + 1}. ${q.q.replace(/^\d+\.\s*/, "")}
-      </div>
+    clearMarks(key, qi);
+    const qbox = document.getElementById(`${key}-box-${qi}`);
+    qbox.classList.add(ok ? 'done' : 'missed');
 
-      <div class="explain">
-        <b>Правильный ответ:</b> ${answerText(q,correctAnswers)}<br>
-        <b>Ваш ответ:</b> ${answerText(q,selected)}<br><br>
+    correctAnswers.forEach(i=>{
+      const label = document.getElementById(`${key}-q${qi}-opt${i}`);
+      if(label) label.classList.add('correct-option');
+    });
+    selected.forEach(i=>{
+      if(!correctAnswers.includes(i)){
+        const label = document.getElementById(`${key}-q${qi}-opt${i}`);
+        if(label) label.classList.add('wrong-option');
+      }
+    });
 
-        <b>Explanation RU:</b> ${q.ru}<br>
-        <b>Explanation KZ:</b> ${q.kz}<br>
-
-        <span class="small"><b>Source:</b> ${q.source}</span>
-      </div>
-    </div>`;
+    const fb = document.getElementById(`${key}-feedback-${qi}`);
+    fb.className = "feedback show";
+    fb.innerHTML = `
+      <b>${UI[currentLang].correct}:</b> ${answerText(q,correctAnswers)}<br>
+      <b>${UI[currentLang].your}:</b> ${answerText(q,selected)}<br><br>
+      <b>${UI[currentLang].explanation}:</b> ${currentLang === 'kz' ? q.kz : q.ru}<br>
+      <span class="small"><b>${UI[currentLang].source}:</b> ${q.source}</span>
+    `;
   });
 
   const percent = Math.round(score / unit.questions.length * 100);
-
-  let level = percent >= 80
-    ? "Жақсы нәтиже / Хороший результат"
-    : percent >= 50
-      ? "Орташа нәтиже / Средний результат"
-      : "Қайталау керек / Нужно повторить";
-
+  const level = percent >= 80 ? UI[currentLang].good : percent >= 50 ? UI[currentLang].mid : UI[currentLang].low;
   document.getElementById("result-" + key).innerHTML = `
-    <div class="summary">
-      <h2>${unit.title}</h2>
-      <h2>${score} / ${unit.questions.length} (${percent}%)</h2>
-      <p><b>${level}</b></p>
-    </div>
-  ` + details;
-
-  document.getElementById("result-" + key).scrollIntoView({
-    behavior:"smooth",
-    block:"start"
-  });
+    <div class="inline-score">
+      ${UI[currentLang].score}: ${score} / ${unit.questions.length} (${percent}%) — ${level}
+    </div>`;
+  document.getElementById("result-" + key).scrollIntoView({ behavior:"smooth", block:"start" });
 }
-renderUnit("unit11");
-renderUnit("unit12");
-renderUnit("unit13");
+
+renderAll(true);
 
 document.addEventListener("copy",function(e){
   e.preventDefault();
-  alert("Бұл материал авторлық құқықпен қорғалған. Көшіруге рұқсат жоқ. © @elnazm_ln");
+  alert(currentLang === 'kz' ? "Бұл материал авторлық құқықпен қорғалған. Көшіруге рұқсат жоқ. © @elnazm_ln" : "Материал защищён авторским правом. Копирование запрещено. © @elnazm_ln");
 });
 
 document.addEventListener("keydown",function(e){
   if((e.ctrlKey||e.metaKey) && ["c","u","s","p"].includes(e.key.toLowerCase())){
     e.preventDefault();
-    alert("Көшіру/сақтау шектелген. © @elnazm_ln");
+    alert(currentLang === 'kz' ? "Көшіру/сақтау шектелген. © @elnazm_ln" : "Копирование/сохранение ограничено. © @elnazm_ln");
   }
 });
 </script>
